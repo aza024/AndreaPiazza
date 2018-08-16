@@ -1,0 +1,109 @@
+body{
+    font-family: 'Playfair Display', serif;
+    line-height:  1.618;
+    margin: 0 0 0 3%;
+ }
+
+/* header */
+/*--------------------------------------- */
+.hello,  header{
+    display:flex;
+}
+
+.AP{
+    font-size: 2.5em;
+    padding-left: .95em;
+    font-weight: bolder;
+    color: black;
+    font-family:'Times New Roman', Times, serif
+ }
+
+ /* for square */
+ .area {
+    position:absolute;
+    display:flex;
+    margin: 25px 0 15px 28px;
+ }
+ .object {
+    width:70px;
+    height:70px;
+    border: 2px solid #be8f1f;
+    animation: anim 2s;
+ }
+ 
+ .object:hover{
+     border: 2px solid black;
+ }
+
+/* nav */
+
+ .navigation{
+      margin-top:2.8em;
+ }
+.nav{
+    list-style: none;
+    letter-spacing: .25em;
+    max-width: 96%;
+}
+.nav li{
+    display: inline-block;
+    padding: 0 1em;
+}
+.nav li a{
+    text-decoration: none;
+    color:black;
+
+}
+.nav li a:hover, .hello{
+    color:#be8f1f;
+}
+
+.hamburger{
+    display:none;
+}
+
+hr{
+    margin-right: 1em;
+    width: 80%;
+}
+
+/* about section */
+/*--------------------------------------- */
+.hello{
+    font-size: 2.5em;
+}
+.p{
+    font-size: 1.5em;
+}
+.about{
+    width: 95%;
+}
+
+.aboutP{
+    justify-content: flex-end;
+}
+.blackBox{
+    width: 25em;
+    height:25em;
+    background-color:black;
+    border: 2px solid grey;
+    opacity: .85;
+}
+
+/* testimonials */
+/*--------------------------------------- */
+
+/* portfolio */
+/*--------------------------------------- */
+
+/* contact */
+/*--------------------------------------- */
+
+ @keyframes anim {
+    0% {
+       transform:rotate(45deg);
+    }
+    100% {
+       transform:rotate(90deg);
+    }
+ }
