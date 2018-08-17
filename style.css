@@ -1,191 +1,190 @@
-body{
-    font-family: 'Playfair Display', serif;
-    line-height:  1.618;
-    margin: 0 0 0 3%;
- }
- i:hover,.nav li a,.connectHdr, .letsConnect{
-    color:black
+body {
+  font-family: "Playfair Display", serif;
+  line-height: 1.618;
+  margin: 0 0 0 3%;
 }
-.nav li a:hover, .hello, h1, i{
-    color:#be8f1f;
+
+.hello, header, main, .area, .nameDesc, main {
+  display: flex;
 }
+
+i:hover, .nav li a, .connectHdr, .letsConnect {
+  color: black;
+}
+
+.nav li a:hover, .hello, h1, i {
+  color: #be8f1f;
+}
+
 /* header */
 /*--------------------------------------- */
-.hello,  header{
-    display:flex;
+.AP {
+  font-size: 2.5em;
+  padding-left: 1.15em;
+  margin-top: 1em;
+  font-weight: bolder;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.AP{
-    font-size: 2.5em;
-    padding-left: .95em;
-    font-weight: bolder;
-    color: black;
-    font-family:'Times New Roman', Times, serif
- }
+/* for square */
+.area {
+  position: absolute;
+  margin: 25px 0 15px 28px;
+}
 
- /* for square */
- .area {
-    position:absolute;
-    display:flex;
-    margin: 25px 0 15px 28px;
- }
- .object {
-    width:70px;
-    height:70px;
-    border: 2px solid #be8f1f;
-    animation: anim 2s;
- }
- 
- .object:hover{
-     border: 2px solid black;
- }
+.object {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #be8f1f;
+  animation: anim 2s;
+}
+
+.object:hover {
+  border: 2px solid black;
+}
 
 /* nav */
-
- .navigation{
-      margin-top:2.8em;
- }
-.nav{
-    list-style: none;
-    letter-spacing: .25em;
-    max-width: 96%;
-}
-.nav li{
-    display: inline-block;
-    padding: 0 1em;
-}
-.nav li a{
-    text-decoration: none;
+.navigation {
+  margin-top: 2.8em;
 }
 
-
-.hamburger{
-    display:none;
+.nav li {
+  display: inline-block;
+  /* padding: 0 1em; */
 }
 
-hr{
-    margin-right: 1em;
-    width: 80%;
+.nav li a {
+  text-decoration: none;
+  margin-left: 2em;
+}
+
+.hamburger {
+  display: none;
 }
 
 /* about section */
 /*--------------------------------------- */
-.hello{
-    font-size: 2.5em;
-}
-.p{
-    font-size: 1.5em;
-}
-.about{
-    width: 95%;
+h2 {
+  text-align: center;
 }
 
-.head3{
-    margin: 2em .5em;
+.hello {
+  font-size: 2.5em;
 }
 
-.nameDesc, .about{
-    display: flex;
-}
-.aboutP{
-    justify-content: flex-end;
+.p {
+  font-size: 1.5em;
 }
 
-.connectBox, .blackBox{
-    
-    opacity: .85;
-    border: 7px inset #be8f1f;
-    margin-top: 1.8em;
-    margin-left: 4.5em;
-    
-   
-  
-}
-.blackBox{
-    width: 27em;
-    height:23em;
-    position: relative;
-    background-color:black;
-  
-}
-.connectBox{
-    width:21em;
-    position: absolute;
-    padding: 3em;
-    margin-right:5em;
-    border: 5px dotted black;
-    
+.head3 {
+  margin: 2em 0.5em;
 }
 
-.letsConnect{
-    position: relative;
+.aboutAP {
+  width: 80%;
 }
-i{
-    font-size:2em;
+
+.connectBox, .blackBox {
+  opacity: 0.85;
+  border: 7px inset #be8f1f;
+  margin-top: 1.8em;
+  margin-left: 4.5em;
 }
- .fa-github{
-    margin-left:7em;
-    
+
+.blackBox {
+  width: 27em;
+  height: 23em;
+  /* position: relative; */
+  background-color: black;
 }
-.fa-linkedin-in{
-    margin-left: 2em;
+
+.connectBox {
+  width: 21em;
+  position: absolute;
+  padding: 3em;
+  margin-right: 5em;
+  border: 5px dotted black;
 }
-.paragraphs{
-    width: 60%;
-    margin-right:2em;   
+
+.letsConnect {
+  position: relative;
 }
-.connectHdr{
-    margin-left: 9em;
-    margin-top: 1.5em;
+
+i {
+  font-size: 2em;
 }
-input, textarea{
-    border: 1px dashed black;
-    font-size: 1em;
-    font-family: "Fira Sans";
-    text-transform: uppercase;
+
+.paragraphs {
+  width: 60%;
 }
+
+input, textarea {
+  border: 1px dashed black;
+  font-size: 1em;
+  font-family: "Fira Sans";
+  text-transform: uppercase;
+}
+
 /* form */
 /*--------------------------------------- */
-
-.container{
+/* .container{
     display: flex;
     margin-top:3em;
     max-width: 95%;
-}
-
-
+} */
 /* testimonials */
 /*--------------------------------------- */
-
 /* portfolio */
 /*--------------------------------------- */
-.carouselSlider{
-    position: relative;
-}
-.carousel{
-    background: #2f4357;
-    margin-top: 20px;
-    width: 50%;
-    position: relative;
-}
-.carousel .item{
-    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-}
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-}
-.bs-example{
-	margin: 20px;
+.sliders {
+  width: 80%;
 }
 
+.carousel {
+  background: #2f4357;
+  margin-top: 20px;
+  width: 70%;
+}
+
+.carousel .item img {
+  margin: 0 auto;
+  /* Align slide image horizontally center */
+}
+
+.bs-example {
+  z-index: 0;
+}
+
+/* maps */
 /* contact */
+#googleMap {
+  opacity: 0.25;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-left: 10em;
+}
+
+#contactForm {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  margin: 60px auto 0;
+  padding: 10px;
+  background: black;
+  height: auto;
+  opacity: 0.45;
+}
+
 /*--------------------------------------- */
- 
- @keyframes anim {
-    0% {
-       transform:rotate(45deg);
-    }
-    100% {
-       transform:rotate(90deg);
-    }
- }
+@keyframes anim {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -5,19 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Andréa Piazza</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+   
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Playfair+Display" rel="stylesheet">
+   
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- GMaps -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
+    
+    <!-- custom -->
+
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <!-- for slider -->
     
     <script defer src="main.js"></script>
 </head>
 <body>
     <header>
-       <!--------------nav--------------  -->
+<!-- nav -->
         <div class = initial>
-            <p class ="AP"> AP <p>
+            <p class ="AP"> AP </p>
         </div>
         <div class="area">
             <div class="object"></div>
@@ -30,103 +43,88 @@
                     <li><a class ="navbar" href="#gallery">Portfolio</a></li>
                     <li><a class ="navbar" href="#contact">Contact</a></li>
                 </ul>
-                <hr>   
+                 
+        </div> 
     </header>
+<!-- about -->
     
-    <!--------------about--------------  -->
-    <div class ="about">
-        <span class = "nameDesc">
-       
-       
-    </span>
-
     <div class = "paragraphs">
+            <hr> 
             <h1>Hello! I'm Andréa Piazza!</h1>
              <!-- <h3 class = head3>a web development enthusiast!</h3> -->
         <p class="aboutAP">
             I'm an enthusiastic full-stack web developer with a goal to create meaningful web applications that are fun to use by focusing on user-centric design. I’m addicted to learning and love learning full-stack web development because my interest in coding and design converge. Let’s connect so we can talk about how I can bring my passion my to your project! 
         </p>
-        <p class = "aboutP">
+        <p class = "aboutAP">
             Since graduating from The State University of New York’s Polytechnic Institute in 2015, I worked as an application engineer for two years. Although I loved my time working for Steelcase Inc., I didn’t have an outlet for my creativity my work and decided to moved across the country and take General Assembly’s Web Development Immersive course.
         </p>  
-        <p class ="aboutP">  
+        <p class ="aboutAP">  
             When I’m not coding, I can be found reading or wandering around San Francisco trying to find the best french fries in the city. I’m happiest when I’m around family, friends, or someone I can learn from. I enjoy staying active through LIT classes, yoga, walking, or doing Krav Maga. I used to dress my cat up every Halloween, until the cat decided to live with my father in New York because he feeds her hot dogs and ice cream. Now, I stay happy dressing up webpages. 
         </p>
-        </div>
-
-    <aside>
-        <div class ="blackBox"></div>
-        <div class ="connectBox"></div>
-        <div class ="letsConnect">
-            <h1 class ="connectHdr">Let's Connect!</h1>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin-in"></i>
-        </div>
-        
-       <section class = "container">
-            <form>
-                
-                    <input type ="text" name="Name" placeholder="Name">
-                    <input type ="text" name="Email"
-                    placeholder = "E-mail Address">
-               
-                    <input type ="subject" name="Subject" placeholder="Subject">
-                
-                    <textarea rows="20" columns:"70"></textarea>
-                    <input type ="submit" name = "button" >
-                
-            </form>
-        </section>
-    </aside>
-</div>
     </div>
+    
+    <main>
+
+    <section>
+        <hr>
+        <h2>Portfolio</h2>
+            <div class="bs-example">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>   
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/dots.png" alt="First Slide">
+                            </div>
+                            <div class="item">
+                                <img src="images/dots.png" alt="Second Slide">
+                            </div>
+                            <div class="item">
+                                <img src="images/dots.png" alt="Third Slide">
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="contForm">
+                    <h2 class ="connectHdr">Let's Connect!</h2>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <div id="googleMap" style="width:70%;height:350px"></div>
+                </div>
+    </section>
+
+
+  
+    
+
+</main>
+
+   
 
 <!-- 
     <div class ="portfolio">
         </div>
 
-<div class="bs-example">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>   
-            <!-- Wrapper for carousel items -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="/examples/images/slide1.png" alt="First Slide">
-                </div>
-                <div class="item">
-                    <img src="/examples/images/slide2.png" alt="Second Slide">
-                </div>
-                <div class="item">
-                    <img src="/examples/images/slide3.png" alt="Third Slide">
-                </div>
-            </div>
-            <!-- Carousel controls -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
 
     <div class ="contact">
         </div> -->
 
-
+<footer>
+       
+</footer>
 
 </body>
 </html>
