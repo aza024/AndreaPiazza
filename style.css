@@ -3,7 +3,12 @@ body{
     line-height:  1.618;
     margin: 0 0 0 3%;
  }
-
+ i:hover,.nav li a,.connectHdr, .letsConnect{
+    color:black
+}
+.nav li a:hover, .hello, h1, i{
+    color:#be8f1f;
+}
 /* header */
 /*--------------------------------------- */
 .hello,  header{
@@ -51,12 +56,8 @@ body{
 }
 .nav li a{
     text-decoration: none;
-    color:black;
+}
 
-}
-.nav li a:hover, .hello{
-    color:#be8f1f;
-}
 
 .hamburger{
     display:none;
@@ -79,26 +80,107 @@ hr{
     width: 95%;
 }
 
+.head3{
+    margin: 2em .5em;
+}
+
+.nameDesc, .about{
+    display: flex;
+}
 .aboutP{
     justify-content: flex-end;
 }
-.blackBox{
-    width: 25em;
-    height:25em;
-    background-color:black;
-    border: 2px solid grey;
+
+.connectBox, .blackBox{
+    
     opacity: .85;
+    border: 7px inset #be8f1f;
+    margin-top: 1.8em;
+    margin-left: 4.5em;
+    
+   
+  
 }
+.blackBox{
+    width: 27em;
+    height:23em;
+    position: relative;
+    background-color:black;
+  
+}
+.connectBox{
+    width:21em;
+    position: absolute;
+    padding: 3em;
+    margin-right:5em;
+    border: 5px dotted black;
+    
+}
+
+.letsConnect{
+    position: relative;
+}
+i{
+    font-size:2em;
+}
+ .fa-github{
+    margin-left:7em;
+    
+}
+.fa-linkedin-in{
+    margin-left: 2em;
+}
+.paragraphs{
+    width: 60%;
+    margin-right:2em;   
+}
+.connectHdr{
+    margin-left: 9em;
+    margin-top: 1.5em;
+}
+input, textarea{
+    border: 1px dashed black;
+    font-size: 1em;
+    font-family: "Fira Sans";
+    text-transform: uppercase;
+}
+/* form */
+/*--------------------------------------- */
+
+.container{
+    display: flex;
+    margin-top:3em;
+    max-width: 95%;
+}
+
 
 /* testimonials */
 /*--------------------------------------- */
 
 /* portfolio */
 /*--------------------------------------- */
+.carouselSlider{
+    position: relative;
+}
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+    width: 50%;
+    position: relative;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
 
 /* contact */
 /*--------------------------------------- */
-
+ 
  @keyframes anim {
     0% {
        transform:rotate(45deg);
