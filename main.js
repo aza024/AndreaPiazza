@@ -1,5 +1,38 @@
+$(document).ready(function(){
+    $(document).ready(function() {
+        // testimonial fade
+        function doFade() {
+            $(".one").fadeIn(6000,function() {
+                $(".one").fadeOut(6000).delay(3000);
+                setTimeout(fadeTwo,6000);
+            });
+        }
+    
+        function fadeTwo() {
+            $(".two").fadeIn(6000,function() {
+                $(".two").fadeOut(6000).delay(3000);
+                setTimeout(fadeThree,6000);
+            });
+        }
+    
+        function fadeThree() {
+            $(".three").fadeIn(4000,function() {
+                $(".three").fadeOut(6000).delay(3000);
+                setTimeout(doFade,6000);
+            });
+        }
+        doFade();
+    });
 
-
+// email fade
+    $("#emailBtn").click(function(){
+        $("#name.form-control").fadeToggle(1000);
+        $("#email").fadeToggle(1000);
+        $("#subject").fadeToggle(1000);
+        $("#message").fadeToggle(1000);
+        $("#submitBtn").fadeToggle(1000);
+    });
+// GoogleMapsAPI
 function initialize(){
     var mapProperties = {
         center:new google.maps.LatLng(37.790840,-122.401160),
@@ -16,3 +49,14 @@ var marker=new google.maps.Marker({
     // icon:'pinkball.png' // replace default marker with custom icon
     });
   marker.setMap(map);
+
+    function doFade() {
+        $(".one").fadeIn(6000,function() {
+            $(".one").fadeOut(6000).delay(3000);
+            setTimeout(fadeTwo,6000);
+        });
+    }
+
+  
+
+});
