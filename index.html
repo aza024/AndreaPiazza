@@ -18,6 +18,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <!-- GMaps -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
     
@@ -29,23 +31,28 @@
 </head>
 <body>
      <header>
-        <div class = initial>
-            <p class ="AP"> AP </p>
-        </div>
-        <div class="area">
+        <div class = "initalBox">
+            <p class="AP"> AP </p>
             <div class="object"></div>
-            <h1>Hello! I'm Andréa Piazza!</h1>
+            
         </div>
-
-      
+            <h1 class ="hello">Hello! I'm Andréa Piazza!</h1>
+        <div class = "navigation">
+                <a class="hamburger"><i class="fa fa-bars" id="fabars"></i></a>
+                <ul class="nav" class ="unstyled">
+                       
+                    <li><a class ="nav" href="#about">About</a></li>
+                    <li><a class ="nav" href="#gallery">Portfolio</a></li>
+                    <li><a class ="nav" href="#contact">Contact</a></li>
+                </ul>    
+        </div>
     </header> 
 
 <!-- about -->
-<!-- <hr class ="unstyled">  -->
 
-<section class = "aboutMe"></section>
+
     <div class = "paragraphs">
-        <div id ="row1"> 
+        <div id ="col1"> 
         <div class ="aboutAP">
           
            <h4> <p>
@@ -61,11 +68,10 @@
                 <a class ="cat" id="catid">dress my cat up every Halloween</a>, until the cat decided to live with my father in New York because he feeds her hot dogs and ice cream. Now, I stay happy dressing up webpages. 
             </p>
             <p>Let's connect and talk about how I can bring passion to your project!</p>
-    
+       
         </div>
-            <!-- <button id ="emailBtn">E-Mail</button> -->
-            <!-- <div id="googleMap" style="width:50%;height:100px"></div> -->
-        <form>    
+          
+        <form>   
           <div class="form-group">
             <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
        
@@ -78,32 +84,27 @@
           </div>
             <div class="form-group">
             <textarea rows="5" columns="5" class="form-control" id="message" placeholder="Message" name="message"></textarea>
-         
-          <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
+            
+          <button type="submit"  id="submitBtn">Submit</button>
           <i class="fab fa-github"></i>
             <i class="fab fa-linkedin-in"></i>
         </div>
         </form>
     </div>
 
-        <div id = "row2">
-             <img class = "andreaImg" src = "images/andrea.png">
-             <div class = "navigation">
-                    <a class="hamburger"><i class="fa fa-bars" id="fabars"></i></a>
-                    <ul class="nav" class ="unstyled">
-                        <li><a class ="nav" href="#about">About</a></li>
-                        <li><a class ="nav" href="#gallery">Portfolio</a></li>
-                        <li><a class ="nav" href="#contact">Contact</a></li>
-                    </ul> 
-            </div>
+        <div id = "col2">
+            
+            <img class = "andreaImg" src = "images/andrea.png">
+            <div id="googleMap" style="width:50%;height:100px"></div> 
         </div>
+        
     </div>
 </section>
 
-    <main>
 
-    <section>
-        <hr class ="unstyled">
+<div id = "shadowContainer">
+    <main>  
+    <section class = "blBkrd">
         <h2>Portfolio</h2>
             <div class="bs-example">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -118,7 +119,7 @@
                         <div class="carousel-inner">
                             
                             <div class="item active">
-                                <img src="images/dots.png" alt="First Slide">
+                               <img class="firstSlide" src="images/dots.png" alt="First Slide"></a>
                             </div>
                             <div class="item">
                                 <img src="images/dots.png" alt="Second Slide">
@@ -136,37 +137,20 @@
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="section-bl">
                             <div id="testimonial-container">
                                 <h2>Testimonials</h2>
                                     <p class="one">"Andrea is an incredible innovator.  The company identified antiquated processes and practices that they wanted to modify, and needed someone with exceptional creativity to do that.  Andrea was involved in implementing both Lean and Agile principles throughout the organization.  She was single handedly responsible for the idea to create a new and vastly improved external website for the company, and engaged Management as well as a project team to make this vision a reality.  Andrea not only contributed work time to this endeavor, but also personal time to make this project an overwhelming success.  As is often the case with implementing change, she faced resistance.  Andrea personally spear headed the change management process, and served as an enthusiastic change agent." -Rebecca Durkee, Project Manager</p>
                                     <p class="two">“Andrea is not only extremely knowledgeable in different web technologies / software development, but is also a great teammate. She’s an attentive listener and communicator who knows how to think critically and problem solve, which makes her an effective and efficient programmer. I’d be lucky to work with her again!” - Sofia Aguirre, General Assembly</p>
-                                    <p class="three">Intelligent. Kind. Ambitious.  These are but a few words that describe Andrea Piazza. Her drive to learn new material quickly and efficiently is what makes her such a formidable web developer in today's field. With excellent written and verbal skills, she is always willing to share her knowledge and tips with others. She would be an asset to any company. </p>
+                                    <p class="three">Intelligent. Kind. Ambitious.  These are but a few words that describe Andrea Piazza. Her drive to learn new material quickly and efficiently is what makes her such a formidable web developer in today's field. With excellent written and verbal skills, she is always willing to share her knowledge and tips with others. She would be an asset to any company. - Luke Engle, General Assembly </p>
+                                   <p class ="four"> Andrea has shown not only an acute knowledge of web development tools but also a consistent willingness to assist others. Her knowledge combined with her ability to convey solutions to complex problems would make her a valuable addition to any team. -Craig Lymus, General Assembly
                                   </div>
+
+                                </div>
                                   
-                                
-                        
-    <div class="container">
-           
-            <!-- <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <button id ="emailBtn">E-Mail</button>
-        <form>    
-          <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Enter E-mail" name="email">
-          </div>
-            <div class="form-group">
-            <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-          </div>
-            <div class="form-group">
-            <input type="textarea" rows="4" columns="20" class="form-control" id="message" placeholder="Message" name="message">
-         
-          <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
-        </div>
-        </form> -->
-    </div>  
+                            
 </section>   
 </main>
 
@@ -174,6 +158,6 @@
 <footer>
    
 </footer>
-
+</div>
 </body>
 </html>

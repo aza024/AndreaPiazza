@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+  /* font-size: 2vw; */
+}
+
 body {
   font-family: "Playfair Display", serif;
   line-height: 1.618;
@@ -7,7 +12,19 @@ body {
 .hello, header, main, .area, .nameDesc, main, .portTest, aside, .paragraphs {
   display: flex;
 }
+.paragraphs{
+  height: 100vh;
+  width: 100%
+}
 
+aboutAP.p{
+  font-size: 1vw;
+}
+
+
+h1{
+  font-size: 2.5vw;
+}
 i:hover, .nav li a, .connectHdr, .letsConnect {
   color: black;
 }
@@ -18,28 +35,30 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
 
 /* header */
 /*--------------------------------------- */
+.object {
+  width: 75px;
+  height: 75px;
+  border: 2px solid #be8f1f;
+  animation: anim 2s;
+  position: relative;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
 .AP {
   font-size: 2.5em;
-  padding-left: 1.15em;
-  margin-top: 1em;
+  /* padding-left: 1.15em;*/
+  margin-top: .80em; 
+  margin-left: .25em;
   font-weight: bolder;
   color: black;
   font-family: "Times New Roman", Times, serif;
-}
-
-/* for square */
-.area {
   position: absolute;
-  margin: 25px 0 15px 28px;
+}
+.hello{
+  margin: 1em;
 }
 
-.object {
-  width: 70px;
-  height: 70px;
-  border: 2px solid #be8f1f;
-  margin-right: 1em;
-  animation: anim 2s;
-}
 
 .object:hover {
   border: 2px solid black;
@@ -47,13 +66,16 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
 
 /* nav */
 .navigation {
-  margin-top: 2.8em;
+  margin-top: 2.5em;
   margin-bottom: none;
   padding-bottom: none;
+  position: relative;
+  align-content: flex-end;
 }
 
 .nav li {
   display: inline-block;
+  font-size: 2rem;
   /* padding: 0 1em; */
 }
 
@@ -75,6 +97,14 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
   margin: none;
   padding: none;
 }
+
+#ellaImage{
+  z-index: 255;
+  width: 50%;
+  height: 50%;
+}
+
+
 /* about section */
 /*--------------------------------------- */
 h2 {
@@ -84,6 +114,7 @@ h2 {
 .hello {
   font-size: 2.5em;
 }
+
 
 .p {
   font-size: 1.5em;
@@ -96,12 +127,13 @@ h2 {
 .aboutAP {
   width: 80%;
 }
+.aboutMe{
+  background-color:white;
+}
 
-.connectBox, .blackBox {
-  opacity: 0.85;
-  border: 7px inset #be8f1f;
-  margin-top: 1.8em;
-  margin-left: 4.5em;
+#ellaImage{
+  margin-left: 25%;
+  margin-bottom: 10%;
 }
 
 .andreaImg{
@@ -109,8 +141,13 @@ h2 {
    border: 1px solid black;
 }
 
+.p{
+  width: 100%;
+}
 .form-group {
-  width: 75%;
+  width: 30vw;
+  height: 4vh;
+
 }
 
 i {
@@ -125,26 +162,82 @@ i {
   margin-left: 2em;
 }
 
-
+.btn-default{
+  color:	#428bca;
+}
 
 input, textarea {
   border: 1px dashed black;
   font-size: 1em;
+  color: #5C7E9B;
+  
+}
+input:focus, textarea:focus {
+  background-color: beige;
+  color:#5C7E9B;
+ 
 }
 
+
 /* form */
+.form{
+  width: 100%;
+}
+
+
+button {
+	border-radius: 0.3em;
+	box-shadow: inset 0px 0px 30px 45px #428bca , 0px 0px 0px 0px #428bca;
+	color:#FFFFE7;
+	transition: box-shadow 0.2s, color 0.1s 0.25s;
+}
+
+button:hover {
+	box-shadow: inset 0px 0px 0px 0px #428bca, 0px 0px 20px 10px #428bca;
+  color:#428bca;
+  background-color: #FFFFE7;
+}
 /*--------------------------------------- */
 /* testimonials */
 /*--------------------------------------- */
-.one, .two, .three {
+.one, .two, .three, .four {
+  z-index: 100;
   width: 70%;
+  margin: 5em;
+  color:black; 
+  font-size: 1vw;
 }
 
+.grey{
+  height: 100vh;
+  width: 100vh;
+}
 #testimonial-container {
-  width: 70%;
+  width: 100%;
+  height:100vh;
   margin: 10px auto;
+  z-index: 50;
+  background: url("images/computer.jpg");
+  background-size: cover;
+  background-repeat:none;
+  opacity: .7;
+  color:black;
+  text-align: center;
+  position: relative;
 }
 
+.one, .two, .three, .four{
+  /* margin-left: 18rem; */
+  font-size: 1.2em;
+  width: 40%;
+  
+}
+  main{
+  background-color:beige;
+  color:black;
+  height: 100vh;
+  position: relative;
+}
 /* portfolio */
 /*--------------------------------------- */
 .sliders {
@@ -164,18 +257,35 @@ input, textarea {
 
 .bs-example {
   z-index: 0;
+  margin-left : 23em;
 }
 
 
 /* maps */
 /* contact */
-
 #googleMap {
   opacity: 0.25;
   position: relative;
   z-index: 2;
 }
+#shadow{
+  position: absolute;
+  z-index: 190;
+  background-color: #999999;
+  height:100%;
+  width: 100%;
+}
 
+
+
+#thumbnail{
+  opacity: 1;
+  z-index: 2000;
+  margin-top: 5%;
+  margin-left: 25%;
+  height: 600px;
+  width: 600px;
+}
 
 /*--------------------------------------- */
 @keyframes anim {
