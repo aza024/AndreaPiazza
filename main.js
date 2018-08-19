@@ -1,9 +1,17 @@
 $(document).ready(function(){
-    $(document).ready(function() {
+
+    // for cat pic
+        $('a.cat').on('click',function () {
+            $('#cat').show();
+            });
+
+
         // testimonial fade
         function doFade() {
             $(".one").fadeIn(6000,function() {
                 $(".one").fadeOut(6000).delay(3000);
+                $(".two").css("display","none")
+                $(".three").css("display","none")
                 setTimeout(fadeTwo,6000);
             });
         }
@@ -11,6 +19,7 @@ $(document).ready(function(){
         function fadeTwo() {
             $(".two").fadeIn(6000,function() {
                 $(".two").fadeOut(6000).delay(3000);
+                $(".three").css("display","none")
                 setTimeout(fadeThree,6000);
             });
         }
@@ -24,14 +33,20 @@ $(document).ready(function(){
         doFade();
     });
 
+
 // email fade
-    $("#emailBtn").click(function(){
-        $("#name.form-control").fadeToggle(1000);
-        $("#email").fadeToggle(1000);
-        $("#subject").fadeToggle(1000);
-        $("#message").fadeToggle(1000);
-        $("#submitBtn").fadeToggle(1000);
-    });
+$('#emailBtn').click(function() {
+    $('form').toggle();
+});
+    // $("#emailBtn").click(function(){
+    //     $("#name.form-control").fadeToggle(1000);
+    //     $("#email").fadeToggle(1000);
+    //     $("#subject").fadeToggle(1000);
+    //     $("#message").fadeToggle(1000);
+    //     $("#submitBtn").fadeToggle(1000);
+    // });
+
+
 // GoogleMapsAPI
 function initialize(){
     var mapProperties = {
@@ -43,12 +58,12 @@ function initialize(){
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 // var myCenter = google.maps.LatLng(37.790840,-122.401160);
-var marker=new google.maps.Marker({
-    position:LatLng(37.790840,-122.401160), 
-    animation:google.maps.Animation.BOUNCE, //animates the marker
-    // icon:'pinkball.png' // replace default marker with custom icon
-    });
-  marker.setMap(map);
+// var marker=new google.maps.Marker({
+//     position:new google.maps.LatLng(37.790840,-122.401160), 
+//     animation:google.maps.Animation.BOUNCE, //animates the marker
+//     // icon:'pinkball.png' // replace default marker with custom icon
+//     });
+// //   marker.setMap(map);
 
     function doFade() {
         $(".one").fadeIn(6000,function() {
@@ -57,6 +72,3 @@ var marker=new google.maps.Marker({
         });
     }
 
-  
-
-});
