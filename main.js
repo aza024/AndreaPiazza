@@ -37,8 +37,8 @@ function toggleShadow() {
 
         $('#shadow').on('click', function() {
             if (isShadowed) {
-                $('.blBkrd').css("display","inline")
-
+                $('#myCarousel').css("display","inline")
+                $('form').css("display","inline")
                 document.querySelector('#thumbnail').remove()
                 isThumbnail = false
 
@@ -52,7 +52,8 @@ function toggleShadow() {
 
 function toggleThumbnail() {
     if (!isThumbnail) {
-        $('.blBkrd').css("display","none")
+        $('#myCarousel').css("display","none")
+        $('form').css("display","none")
 
         var thumbnail = document.createElement('img')
         thumbnail.setAttribute('id', 'thumbnail')
@@ -64,7 +65,8 @@ function toggleThumbnail() {
 
         $('#thumbnail').on('click', function() {
             if (isThumbnail) {
-                $('.blBkrd').css("display","inline")
+                $('#myCarousel').css("display","inline")
+                $('form').css("display","inline")
                 document.querySelector('#thumbnail').remove()
                 
                 isThumbnail = false
@@ -106,6 +108,7 @@ $(document).ready(function(){
         $('#navLink1').css('text-decoration','underline')
         $('#navLink2').css('text-decoration','none')
         $('#navLink3').css('text-decoration','none')
+        $('#navLink4').css('text-decoration','none')
 
     })
     $('#navLink2').on('click',function(){
@@ -113,12 +116,21 @@ $(document).ready(function(){
         $('#navLink2').css('text-decoration','underline')
         $('#navLink1').css('text-decoration','none')
         $('#navLink3').css('text-decoration','none')
+        $('#navLink4').css('text-decoration','none')
     })
     $('#navLink3').on('click',function(){
         console.log('clicked')
         $('#navLink3').css('text-decoration','underline')
         $('#navLink1').css('text-decoration','none')
         $('#navLink2').css('text-decoration','none')
+        $('#navLink4').css('text-decoration','none')
+    })
+    $('#navLink4').on('click',function(){
+        console.log('clicked')
+        $('#navLink4').css('text-decoration','underline')
+        $('#navLink1').css('text-decoration','none')
+        $('#navLink2').css('text-decoration','none')
+        $('#navLink3').css('text-decoration','none')
     })
     
 

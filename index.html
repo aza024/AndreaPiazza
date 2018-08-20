@@ -55,7 +55,7 @@
 					<li><a id ="navLink1" href="#about">About</a></li>
 					<li><a id ="navLink2" href="#portfolio">Portfolio</a></li>
                     <li><a id ="navLink3"href="#testimonial">Testimonials</a></li>
-                    
+                    <li><a id ="navLink4"href="#contactlk">Contact</a></li>
                 </ul>
             <i class="fab fa-github"></i>
             <i class="fab fa-linkedin-in"></i>
@@ -67,52 +67,30 @@
     </header> 
 </div>
 <!-- about -->
-
-
     <div class = "paragraphs">
         <div id ="col1"> 
             <a id = "about"></a>
         <div class ="aboutAP"> 
             <h1 class ="hello">Hello! I'm Andréa Piazza!</h1>
-           <h4> <p>
+           <h4> <p class ="hellopg">
                 I'm an enthusiastic full-stack web developer with a goal to create meaningful web applications that are fun to use by focusing on user-centric design.  Let’s connect so we can talk about how I can bring my passion my to your project! 
             </p>
             </h4>
-            <p>
+            <p class ="hellopg">
                 Since graduating from The State University of New York’s Polytechnic Institute in 2015, I worked as an application engineer for two years focusing on SQL and Magic/Unipaas. Although the back-end was facinating, I wanted to find a position that required more creativity. I moved from Connecticut to California to take General Assembly’s Web Development Immersive course where and love learning about web development because my interest in coding and design converge.
             </p>  
-            <p>  
+            <p class ="hellopg">  
                 When not immersed in web development, I can be found looking for new ways to stay active in my new city of San Francisco. I’m happiest when I’m around family, friends, or someone I can learn from. I used to 
                 <a class ="cat" id="catid">dress my cat up every Halloween</a>, until the cat decided to live with my father in New York because he feeds her hot dogs and ice cream. Now, I stay happy dressing up webpages. 
             </p>
             <p>Let's connect and talk about how I can bring passion to your project!</p>
        
         </div>
-        <div class ="contactForm">  
-        <form>   
-          <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-       
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Enter E-mail" name="email">
-          </div>
-            <div class="form-group">
-            <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-          </div>
-            <div class="form-group">
-            <textarea rows="5" columns="5" class="form-control" id="message" placeholder="Message" name="message"></textarea>
-            
-          <button type="submit"  id="submitBtn">Submit</button>
-        </div>
-        </form>
-    </div>
+        
     </div>
 
         <div id = "col2">
-            
             <img class = "andreaImg" src = "images/andrea.png">
-            <div id="googleMap" style="width:79%; height:60px"></div>
         </div>
         
     </div>
@@ -121,10 +99,10 @@
 
 <div id = "shadowContainer">
     <main>  
-        <section class = "blBkrd">
+        <!-- for sticky nav -->
         <a id ="portfolio"></a>
-        <h2>Portfolio</h2>
-        <div class ="portCol1">
+        <div class = "portfolioSection"></div>
+        <h2 class ="portTitle">Portfolio</h2>
             <div class="bs-example">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Carousel indicators -->
@@ -158,29 +136,50 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class = "portCol2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>    
+                
                 </div>
             </div>
         </div>
-
-            
+ 
 
             <div class="section-bl">
                 <a id ="testimonial"></a>
                             <div id="testimonial-container">
-                                <h2>Testimonials</h2>
+                                <h2 id ="testTitle">Testimonials</h2>
                                     <p class="one">"Andrea is an incredible innovator.  The company identified antiquated processes and practices that they wanted to modify, and needed someone with exceptional creativity to do that.  Andrea was involved in implementing both Lean and Agile principles throughout the organization.  She was single handedly responsible for the idea to create a new and vastly improved external website for the company, and engaged Management as well as a project team to make this vision a reality.  Andrea not only contributed work time to this endeavor, but also personal time to make this project an overwhelming success.  As is often the case with implementing change, she faced resistance.  Andrea personally spear headed the change management process, and served as an enthusiastic change agent." -Rebecca Durkee, Project Manager</p>
                                     <p class="two">“Andrea is not only extremely knowledgeable in different web technologies / software development, but is also a great teammate. She’s an attentive listener and communicator who knows how to think critically and problem solve, which makes her an effective and efficient programmer. I’d be lucky to work with her again!” - Sofia Aguirre, General Assembly</p>
                                     <p class="three">Intelligent. Kind. Ambitious.  These are but a few words that describe Andrea Piazza. Her drive to learn new material quickly and efficiently is what makes her such a formidable web developer in today's field. With excellent written and verbal skills, she is always willing to share her knowledge and tips with others. She would be an asset to any company. - Luke Engle, General Assembly </p>
                                    <p class ="four"> Andrea has shown not only an acute knowledge of web development tools but also a consistent willingness to assist others. Her knowledge combined with her ability to convey solutions to complex problems would make her a valuable addition to any team. -Craig Lymus, General Assembly
                                   </div>
-
                                 </div>
                                   
                             
 </section>   
+
+<a id ="contactlk"></a>
+<div id = "contactContainer">
+    <h2 id ="contactHdr" >Contact</h2>
+        <form>   
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Enter E-mail" name="email">
+                </div>
+                  <div class="form-group">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+                </div>
+                  <div class="form-group">
+                  <textarea rows="5" columns="5" class="form-control" id="message" placeholder="Message" name="message"></textarea>
+                  
+                <button type="submit"  id="submitBtn">Submit</button>
+              </div>
+              </form>
+              
+    
+</div>
+<div id="googleMap" style="width:100%; height:250px"></div>
+
 </main>
 
 
