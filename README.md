@@ -1,2 +1,0 @@
-# andreapiazza.io
-Personal Site
