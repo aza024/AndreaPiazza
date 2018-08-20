@@ -30,7 +30,6 @@ aboutAP.p{
   font-size: 1vw;
 }
 
-
 h1{
   font-size: 2.5vw;
 }
@@ -415,7 +414,7 @@ form{
 #thumbnail{
   opacity: 1;
   z-index: 2000;
-  margin-right: 25%;
+  margin-left: 25%;
   margin-top: 5%;
   height: 600px;
   width: 600px;
