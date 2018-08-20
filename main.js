@@ -53,7 +53,8 @@ function toggleShadow() {
 function toggleThumbnail() {
     if (!isThumbnail) {
         $('#myCarousel').css("display","none")
-        $('form').css("display","none")
+        // $('#portText').css("display","none")
+        $('.navbar').css("display","none")
 
         var thumbnail = document.createElement('img')
         thumbnail.setAttribute('id', 'thumbnail')
@@ -66,7 +67,8 @@ function toggleThumbnail() {
         $('#thumbnail').on('click', function() {
             if (isThumbnail) {
                 $('#myCarousel').css("display","inline")
-                $('form').css("display","inline")
+                $('#portText').css("display","inline")
+                $('#portText').css("display","inline")
                 document.querySelector('#thumbnail').remove()
                 
                 isThumbnail = false

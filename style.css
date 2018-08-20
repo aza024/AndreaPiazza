@@ -7,9 +7,11 @@ body {
   font-family: "Playfair Display", serif;
   line-height: 1.618;
   margin: 0 4%;
+  width:90vw;
+  height: 100vh;
 }
 
-.hello, header, main, .area, .nameDesc, main, .portTest, aside, .paragraphs {
+.hello, header, main, .area, .nameDesc, main, .portTest, aside, .paragraphs, #contactContainer {
   display: flex;
 }
 .paragraphs{
@@ -20,6 +22,8 @@ body {
 }
 .hellopg{
   font-size: 1.1em;
+  max-height: 80vh;
+  max-width: 80vw;
 }
 
 aboutAP.p{
@@ -40,7 +44,7 @@ h1{
   width: 50%;
 }
 i:hover, .nav li a, .connectHdr, .letsConnect {
-  color: black;
+  color: #333333;
 }
 
 .nav li a:hover, .hello, h1, i {
@@ -88,13 +92,14 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
   margin-top: .85em; 
   margin-left: .4em;
   font-weight: bolder;
-  color: black;
+  color: #333333;
   font-family: "Times New Roman", Times, serif;
   position: absolute;
 }
 
 .object:hover {
-  border: 2px solid black;
+  border: 2px solid #333333;
+  box-shadow: inset 0px 0px 0px 0px #be8f1f, 0px 0px 10px 5px #be8f1f;
 }
 
 /* nav */
@@ -159,8 +164,10 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
 
 #ellaImage{
   z-index: 255;
-  width: 50%;
-  height: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: 35%;
+  margin-bottom: 10%;
 }
 
 
@@ -190,10 +197,6 @@ h2 {
   background-color:white;
 } */
 
-#ellaImage{
-  margin-left: 25%;
-  margin-bottom: 10%;
-}
 
 .andreaImg{
   margin-top: 4em;
@@ -206,10 +209,12 @@ h2 {
 }
 form{
   margin: 2em;
-  height: 50%;  
+  height: 60%;  
+ 
 }
 #name, #email, #subject, #message{
-  width: 50%;
+  margin-left: 1em;
+  width: 100%;
 }
 #name{
   margin-bottom: 1em;
@@ -247,15 +252,16 @@ form{
 
 #submitBtn {
 	border-radius: 0.3em;
-	box-shadow: inset 0px 0px 30px 45px #428bca , 0px 0px 0px 0px #428bca;
-	color:#FFFFE7;
-	transition: box-shadow 0.2s, color 0.1s 0.25s;
+	box-shadow: inset 0px 0px 30px 45px #428bca , 0px 0px 0px 0px #AC9079;
+	color: #FFFFE7; 
+  transition: box-shadow 0.2s, color 0.1s 0.25s;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 #submitBtn:hover {
 	box-shadow: inset 0px 0px 0px 0px #428bca, 0px 0px 20px 10px #428bca;
-  color:#428bca;
-  background-color: #FFFFE7;
+ color: #428bca;
 }
 /*--------------------------------------- */
 /* testimonials */
@@ -282,14 +288,15 @@ form{
   background: url("images/computer.jpg");
   background-size: cover;
   background-repeat:none;
+  background-position:center;
   opacity: .7;
   text-align: center;
   position: relative;
 }
 
 #contactContainer{
-  /* width: 100vw;
-  height:100vh; */
+  width: 90vw;
+  height:75vh;
   background:#333333;
 }
 #testTitle{
@@ -314,8 +321,23 @@ form{
 }
 /* portfolio */
 /*--------------------------------------- */
-.portTitle{
+/* .portTitle{
   text-align: center;
+  margin: 2em;
+  padding: 2em;
+} */
+.project{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+#portText{
+  width: 40%; 
+  font-size: 1.2em;
+  background-color:#EBE8E3;
+  color:grey;
+  height: 100%;
+  padding: 4em;
+
 }
 .sliders {
   width: 80%;
@@ -325,43 +347,61 @@ form{
   font-size: 2em;
 }
 .carousel {
-  background:#FFFFE7;
+  background:#F5F5DD;
   margin-top: 20px;
-  width: 80%;
-  height: 80%;
+  max-width:100%;
 }
 
 #myCarousel{
-  max-height: 100%;
+  max-height: 80%;
   max-width: 80%;
 }
 .carousel .item img {
   margin: 0 auto;
+  max-width: 100%;
   /* Align slide image horizontally center */
 }
 
 .carousel-control{
-  max-height: 80%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: 10%;
+}
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+
+  width: 100vw;
+  height: 80vh;
+  min-width: 300px;
+  min-height: 300px;
+
+}
 .bs-example {
   z-index: 0;
-  margin-left: 3em;
+  /* width:  100%; */
+  /* height: 100%; */
 }
 
 /* maps */
 /* contact */
 #contactHdr{
   color:#AC9079;
-  padding: 1em;
+  padding: .25px;
 }
 #googleMap {
   /* opacity: 0.5; */
-
+  margin-right: 3em;
+  margin-top: 2em;
   position: relative;
   z-index: 2;
   margin-top: 1em;
+  width:50%; 
+  height:80%;
 }
 #shadow{
   position: absolute;
@@ -375,10 +415,11 @@ form{
 #thumbnail{
   opacity: 1;
   z-index: 2000;
+  margin-right: 25%;
   margin-top: 5%;
-  margin-left: 25%;
   height: 600px;
   width: 600px;
+  /* text-align: center; */
 }
 
 /*--------------------------------------- */
@@ -408,3 +449,188 @@ form{
     font-size: 1.5rem;
   }
 } */
+/* @media screen and (min-width: 1200px){
+  #ellaImage{
+    height:120px;
+    width:120px;
+  }
+  .paragraphs{
+    font-size: 1rem;
+  }
+} */
+
+/* @media only screen and (max-height: 1042px){
+  .aboutAP{
+    font-size:.85em;
+  }
+  p#portText{
+    padding: none;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-height: 1042px){
+  .aboutAP{
+    font-size:.75em;
+  }
+} */
+/* @media only screen and (max-height: 950px){
+  .aboutAP{
+    font-size:.75em;
+  }
+  .andreaImg{
+    width:100%;
+    padding-right: 1em;
+  }
+} */
+
+
+@media only screen and (max-height: 1042px){
+  p#portText{
+    padding: none;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 768px){
+  .object{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1em;
+  }
+  #portText{
+    padding: none;
+    font-size: 10px;
+  }
+  i{
+    font-size: 1.3em;
+  }
+  .fa-linkedin-in, .fa-github {
+    margin: 1.6em .5em;
+  }
+  .aboutAP{
+    font-size: .95em;
+  }
+  .AP{
+    font-size:2em;
+  }
+  .navbar-inverse .navbar-nav > li > a{
+    font-size: 1.1em;
+  }
+
+  .col2{
+    width: 100px;
+  }
+  .hello{
+    font-size: 1.8em;
+    max-height: 80vh;
+    max-width: 100vw;
+  }
+.andreaImg{
+    width: 80%;
+    max-width: 300px;
+    margin-right:5em;
+  }
+  p#portText{
+    padding: none;
+    margin:none;
+    font-size: 1.1em;
+    height:100vh;
+  }
+  #thumbnail{
+    width:450px;
+    height:450px;
+    margin-right: 8em;
+
+  }
+  .bs-example{
+    width:1000px;
+    height:1000px;
+    margin-left: 4em;
+    margin-top:4.5em;
+  }
+ p.one, p.two, p.three, p.four{
+    font-size: 1em;
+    margin-top: 2em;
+  }
+
+#googleMap{
+  margin-top: 4em;
+  width: 450px;
+  height: 300px;
+}
+#name, #email, #subject, #message, #submitBtn{
+  /* margin-left: 1.8em; */
+  width: 90%;
+}
+ .fa-linkedin-in, .fa-github {
+  margin:none;
+
+}}
+@media only screen and (max-height: 450px){
+
+
+  .hamburger{
+    margin-top:5em;
+  }
+  #col2{
+    height: 50%;
+    margin:none;
+  }
+ 
+}
+
+@media only screen and (max-width: 780px){
+  .andreaImg{
+    max-width: 250px;
+    width: 90%;
+    height: 30vh;
+  }
+  .form{
+    max-width: 250px;
+    height: 30vh;
+  }
+.hellopg{
+  max-width: 80vw;
+  max-height: 80vh;
+}
+  #googleMap{
+    max-width: 50%;
+  }
+}
+@media only screen and (max-width: 1100px){
+  .paragraphs{
+    max-height: 80vh;
+  }
+  .andreaImg{
+    /* max-width: 250px; */
+    width: 90%;
+    /* height: 30vh; */
+  }
+  .form{
+    max-width: 250px;
+    height: 30vh;
+  }
+.hellopg{
+  font-size: .8em;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+@media only screen and (max-width: 800px){
+  .andreaImg{
+    max-width: 250px;
+    width: 90%;
+    height: 30vh;
+  }
+  .form{
+    max-width: 250px;
+    height: 30vh;
+  }
+.hellopg{
+  font-size: .8em;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+  #googleMap{
+    max-width: 50%;
+  }
+
+}}
