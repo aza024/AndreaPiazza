@@ -213,8 +213,8 @@ form{
  
 }
 #name, #email, #subject, #message{
-  margin-left: 1em;
-  width: 100%;
+  margin-left: 6%;
+  width: 80%;
 }
 #name{
   margin-bottom: 1em;
@@ -256,7 +256,7 @@ form{
 	color: #FFFFE7; 
   transition: box-shadow 0.2s, color 0.1s 0.25s;
   margin-top: 1em;
-  margin-left: 1em;
+  margin-left: 6%;
 }
 
 #submitBtn:hover {
@@ -296,8 +296,8 @@ form{
 
 #contactContainer{
   width: 90vw;
-  height:75vh;
-  background:#333333;
+  height:60vh;
+  background-color: #333333;
 }
 #testTitle{
   padding: 1em;
@@ -321,18 +321,18 @@ form{
 }
 /* portfolio */
 /*--------------------------------------- */
-/* .portTitle{
+.portTitle{
+  margin: 7%;
   text-align: center;
-  margin: 2em;
-  padding: 2em;
-} */
+  position: inline-block;
+}
 .project{
   font-weight: bolder;
   text-decoration: underline;
 }
 #portText{
   width: 40%; 
-  font-size: 1.2em;
+  font-size: 1.5em;
   background-color:#EBE8E3;
   color:grey;
   height: 100%;
@@ -394,14 +394,14 @@ form{
   padding: .25px;
 }
 #googleMap {
-  /* opacity: 0.5; */
+  opacity: 0.5;
   margin-right: 3em;
   margin-top: 2em;
   position: relative;
   z-index: 2;
   margin-top: 1em;
-  width:50%; 
-  height:80%;
+  width:90vw; 
+  height:40vh;
 }
 #shadow{
   position: absolute;
@@ -551,15 +551,15 @@ form{
     font-size: 1em;
     margin-top: 2em;
   }
-
+/* 
 #googleMap{
   margin-top: 4em;
   width: 450px;
   height: 300px;
-}
+} */
 #name, #email, #subject, #message, #submitBtn{
   /* margin-left: 1.8em; */
-  width: 90%;
+  width: 80%;
 }
  .fa-linkedin-in, .fa-github {
   margin:none;
@@ -592,9 +592,9 @@ form{
   max-width: 80vw;
   max-height: 80vh;
 }
-  #googleMap{
+  /* #googleMap{
     max-width: 50%;
-  }
+  } */
 }
 @media only screen and (max-width: 1100px){
   .paragraphs{
@@ -614,7 +614,7 @@ form{
   max-width: 80vw;
   max-height: 80vh;
 }
-@media only screen and (max-width: 800px){
+
   .andreaImg{
     max-width: 250px;
     width: 90%;
@@ -629,8 +629,25 @@ form{
   max-width: 80vw;
   max-height: 80vh;
 }
-  #googleMap{
+#portText{
+  font-size: .5rem;
+  max-width: 80vw;
+  max-height: 100vh;
+}
+  /* #googleMap{
     max-width: 50%;
-  }
+  } */
 
-}}
+}
+
+@media only screen and (max-width: 800){
+  font-size: 1em;
+  max-width: 80vw;
+  max-height: 100vh;
+}
+
+@media only screen and (max-width: 500){
+  font-size: .7em;
+  max-width: 80vw;
+  max-height: 100vh;
+}
