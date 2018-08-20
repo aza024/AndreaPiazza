@@ -6,7 +6,7 @@ html{
 body {
   font-family: "Playfair Display", serif;
   line-height: 1.618;
-  margin: 0 0 0 3%;
+  margin: 0 4%;
 }
 
 .hello, header, main, .area, .nameDesc, main, .portTest, aside, .paragraphs {
@@ -14,7 +14,12 @@ body {
 }
 .paragraphs{
   height: 100vh;
-  width: 100%
+
+  background: #edf4f4;
+  position: relative;
+}
+.contactForm{
+  position: absolute;
 }
 
 aboutAP.p{
@@ -25,12 +30,44 @@ aboutAP.p{
 h1{
   font-size: 2.5vw;
 }
+
+#col1{
+  width: 100%;
+  margin-left:2%;
+
+}
+#col2{
+  width: 50%;
+}
 i:hover, .nav li a, .connectHdr, .letsConnect {
   color: black;
 }
 
 .nav li a:hover, .hello, h1, i {
-  color: #be8f1f;
+  color: #be8f1f; 
+}
+
+
+.stickyNav {
+  position: relative;
+	/* position: -webkit-sticky; */
+}
+.header, .nav {
+	text-align: center;
+	color: #fff;
+}
+.content {
+	width: 600px;
+	margin: 10px auto 100px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /* z-index: 100; */
+  /* border-top: 0; */
 }
 
 /* header */
@@ -41,22 +78,20 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
   border: 2px solid #be8f1f;
   animation: anim 2s;
   position: relative;
-  margin-top: 1em;
-  margin-left: 1em;
+  margin: .5em  .1em;
+ 
+
 }
 
 .AP {
   font-size: 2.5em;
-  /* padding-left: 1.15em;*/
-  margin-top: .80em; 
-  margin-left: .25em;
+  /* padding-left: .55em; */
+  margin-top: .85em; 
+  margin-left: .4em;
   font-weight: bolder;
   color: black;
   font-family: "Times New Roman", Times, serif;
   position: absolute;
-}
-.hello{
-  margin: 1em;
 }
 
 
@@ -65,33 +100,59 @@ i:hover, .nav li a, .connectHdr, .letsConnect {
 }
 
 /* nav */
-.navigation {
-  margin-top: 2.5em;
-  margin-bottom: none;
-  padding-bottom: none;
-  position: relative;
-  align-content: flex-end;
+.navbar, .navbar-inverse {
+  border: black;
+	border-radius: 0;
+	margin-bottom: 0;
+	/* min-height: 80px; */
 }
 
-.nav li {
-  display: inline-block;
-  font-size: 2rem;
-  /* padding: 0 1em; */
+.navbar-inverse .navbar-nav > li > a {
+	font-size: 1.7em;
+  font-weight: 300;
+  color: black;
+	/* padding: 30px 25px 33px 25px; */
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background-color:black;
+}
+
+.navbar-toggle-collapsed{
+  background-color: white;
+  /* color: #999999;  */
+}
+.navbar-toggle-collapsed:hover{
+  background-color: golden;
+  /* color: #999999;  */
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+  color:white;
+  background-color: #be8f1f;
+  opacity: .5;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+  color: #be8f1f;
+}
+
+.container{
+  background-color: white;
 }
 
 .nav li a {
+  margin-top: 1em;
   text-decoration: none;
-  margin-left: 2em;
   padding: none;
+  background-color: white;
+}
+#navLink1, #navLink2, #navLink3:hover{
+  background-color: white;
 }
 
 .hamburger {
   display: none;
 }
 
-.navbar{
-  margin: none;
-}
 
 .unstyled{
   margin: none;
@@ -127,9 +188,9 @@ h2 {
 .aboutAP {
   width: 80%;
 }
-.aboutMe{
+/* .aboutMe{
   background-color:white;
-}
+} */
 
 #ellaImage{
   margin-left: 25%;
@@ -137,29 +198,26 @@ h2 {
 }
 
 .andreaImg{
-   margin-right:7em;
-   border: 1px solid black;
+  margin-top: 4em;
+  margin-right:7em;
+   /* border: 1px solid grey; */
 }
 
 .p{
-  width: 100%;
+  height: 100%;
 }
 .form-group {
   width: 30vw;
   height: 4vh;
-
 }
 
 i {
   font-size: 2em;
 }
 
-.fa-github {
-  margin-left: 7em;
-}
 
-.fa-linkedin-in {
-  margin-left: 2em;
+.fa-linkedin-in, .fa-github {
+  margin: 1.2em .5em;
 }
 
 .btn-default{
@@ -182,17 +240,18 @@ input:focus, textarea:focus {
 /* form */
 .form{
   width: 100%;
+  position: fixed;
 }
 
 
-button {
+#submitBtn {
 	border-radius: 0.3em;
 	box-shadow: inset 0px 0px 30px 45px #428bca , 0px 0px 0px 0px #428bca;
 	color:#FFFFE7;
 	transition: box-shadow 0.2s, color 0.1s 0.25s;
 }
 
-button:hover {
+#submitBtn:hover {
 	box-shadow: inset 0px 0px 0px 0px #428bca, 0px 0px 20px 10px #428bca;
   color:#428bca;
   background-color: #FFFFE7;
@@ -213,7 +272,7 @@ button:hover {
   width: 100vh;
 }
 #testimonial-container {
-  width: 100%;
+  width: 100vw;
   height:100vh;
   margin: 10px auto;
   z-index: 50;
@@ -240,14 +299,31 @@ button:hover {
 }
 /* portfolio */
 /*--------------------------------------- */
+.portCol1{
+  position: absolute;
+  flex-direction: column-reverse;
+ 
+  
+}
+.portCol2{
+  margin-left: 60%;
+  max-width: 50%;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
 .sliders {
   width: 80%;
 }
-
+.carText{
+  text-align: center;
+  font-size: 2em;
+}
 .carousel {
-  background: #2f4357;
+  background:#FFFFE7;
   margin-top: 20px;
-  width: 70%;
+  width: 80%;
+  height: 80%;
 }
 
 .carousel .item img {
@@ -255,23 +331,27 @@ button:hover {
   /* Align slide image horizontally center */
 }
 
+
 .bs-example {
+ 
   z-index: 0;
-  margin-left : 23em;
+  margin-left: 3em;
 }
 
 
 /* maps */
 /* contact */
 #googleMap {
-  opacity: 0.25;
+  /* opacity: 0.5; */
   position: relative;
   z-index: 2;
+  margin-top: 1em;
 }
 #shadow{
   position: absolute;
   z-index: 190;
-  background-color: #999999;
+  background-color: lightgrey;
+  opacity: .5;
   height:100%;
   width: 100%;
 }
@@ -298,3 +378,19 @@ button:hover {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* media queries */
+/* 
+@media only screen and (max-width: 400px){
+  .hamburger{
+    display:block;
+    position:absolute;
+    top:10px;
+    left:2px;
+  }
+  #fabars{
+    display:block;
+    position: absolute;
+    color:white;
+    font-size: 1.5rem;
+  }
+} */

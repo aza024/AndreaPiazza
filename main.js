@@ -2,6 +2,28 @@
 isShadowed = false
 isThumbnail = false
 
+function getActiveImage() {
+    var myCarousel = document.getElementById("myCarousel")
+    var items = myCarousel.children[1].children
+    
+    var activeItem = null
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        console.log(item.className)
+        if (item.className == 'item active') {
+            activeItem = item
+            break
+        }   
+    }
+    console.log(activeItem)
+    return activeItem.children[0]
+}
+
+function changeText(){
+    var image = getActiveImage();
+    console.log(image)
+}
+
 function toggleShadow() {
     if (!isShadowed) {
         var shadow = document.createElement('div')
@@ -15,6 +37,8 @@ function toggleShadow() {
 
         $('#shadow').on('click', function() {
             if (isShadowed) {
+                $('.blBkrd').css("display","inline")
+
                 document.querySelector('#thumbnail').remove()
                 isThumbnail = false
 
@@ -33,7 +57,7 @@ function toggleThumbnail() {
         var thumbnail = document.createElement('img')
         thumbnail.setAttribute('id', 'thumbnail')
         thumbnail.setAttribute('src',
-                               document.querySelector('.firstSlide').getAttribute('src'))
+                               getActiveImage().getAttribute('src'))
         document.querySelector('main').appendChild(thumbnail)
         
         isThumbnail = true
@@ -54,8 +78,55 @@ function toggleThumbnail() {
 }
 
 $(document).ready(function(){
+    // for sticky nav
+    var stickyNavTop = $('.stickyNav').offset().top;
+		   	
+  
+    var stickyNav = function(){
+     var scrollTop = $(window).scrollTop(); //vertical from top
+          
+     //change its position to fixed to stick to top - otherwise change it back to relative
+     if (scrollTop > stickyNavTop) { 
+         $('.nav').addClass('sticky');
+     } else {
+         $('.nav').removeClass('sticky'); 
+     }
+ };
 
+ stickyNav();
+ // and run it again every time you scroll
+ $(window).scroll(function() {
+     stickyNav();
+ });
 
+//  for sticky nav underline
+
+    $('#navLink1').on('click',function(){
+        console.log('clicked')
+        $('#navLink1').css('text-decoration','underline')
+        $('#navLink2').css('text-decoration','none')
+        $('#navLink3').css('text-decoration','none')
+
+    })
+    $('#navLink2').on('click',function(){
+        console.log('clicked')
+        $('#navLink2').css('text-decoration','underline')
+        $('#navLink1').css('text-decoration','none')
+        $('#navLink3').css('text-decoration','none')
+    })
+    $('#navLink3').on('click',function(){
+        console.log('clicked')
+        $('#navLink3').css('text-decoration','underline')
+        $('#navLink1').css('text-decoration','none')
+        $('#navLink2').css('text-decoration','none')
+    })
+    
+
+    // for changing text
+
+    $('myCarousel').change(function(){
+       console.log('hello')
+      })
     // for cat pic
         $('#catid').on('click',function () {
             var ellaImg = document.getElementById('ellaImage')
@@ -65,7 +136,7 @@ $(document).ready(function(){
                 ellaImg.setAttribute('id','ellaImage')
                 document.querySelector('.aboutAP').appendChild(ellaImg)
             } 
-            
+
             $('#ellaImage').css("display","inline")
             $('#ellaImage').fadeOut(3000);
         });
